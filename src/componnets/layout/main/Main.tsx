@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import React from "react";
 
 interface Props {
@@ -7,7 +8,9 @@ interface Props {
 export const Main = ({ children }: Props) => {
   return (
     <>
-      <main>{children}</main>
+      <Box sx={{ marginTop: "3vh" }}>
+        <main>{children}</main>
+      </Box>
     </>
   );
 };

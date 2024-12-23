@@ -20,13 +20,13 @@ export default function useFetch<T>(url: string): any {
   };
 
   //   --------------GETUSERSBYCALL method--------------
-  const GETUSERSBYCALL = async (path: string, page: string, limit: string) => {
-    const query = `getUsersByCall?page=${page}&limit=${limit}`;
-    const r = `${url}/${path}/${query}`;
+  const GET_INCIDENT_TRENDS_BY_CALL = async (start: string, end: string) => {
+    const query = `incident-trends?start=${start}&end=${end}`;
+    const r = `${url}/${query}`;
     console.log(r);
 
     try {
-      const response = await fetch(`${url}/${path}/${query}`);
+      const response = await fetch(`${url}/${query}`);
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(`HTTP error! ${errorData.error.message}`);
@@ -146,7 +146,7 @@ export default function useFetch<T>(url: string): any {
     PATCH,
     DELETE,
     GETOne,
-    GETUSERSBYCALL,
+    GET_INCIDENT_TRENDS_BY_CALL,
     VerifyRefresh,
   };
 }

@@ -1,4 +1,4 @@
-import { Box, Stack } from "@mui/material";
+import { Box, Button, Stack } from "@mui/material";
 import { useEffect, useState } from "react";
 import {
   BarChart,
@@ -12,6 +12,7 @@ import {
 } from "recharts";
 import useFetch from "../../componnets/hooks/UseFetch";
 import { Casualty_regions } from "../casualty_regions/Casualty_regions";
+import { Link } from "react-router-dom";
 
 interface IAttackTypes {
   _id: string;
@@ -43,12 +44,12 @@ export const DeadliestAttack = () => {
           alignItems: "center",
         }}
       >
-        <Box sx={{ margin: 10, width: 2100 }}>
+        <Box sx={{ margin: 10, width: 1500 }}>
           <ResponsiveContainer width="100%" height={700}>
             <BarChart
               data={attackType}
               margin={{
-                top: 20,
+                top: 2,
                 right: 30,
                 left: 20,
                 bottom: 5,
@@ -63,9 +64,9 @@ export const DeadliestAttack = () => {
             </BarChart>
           </ResponsiveContainer>
         </Box>
-        <Box sx={{ margin: 50, height: 50, width: 50 }}>
+        {/* <Box sx={{ margin: 50, height: 50, width: 50 }}>
           <Casualty_regions />
-        </Box>
+        </Box> */}
       </Box>
     </Stack>
   );

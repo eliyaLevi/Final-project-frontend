@@ -9,118 +9,144 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import { ButtonGroup } from "@mui/material";
-
-const pages = ["home", "profil", "appointment"];
+import { ButtonGroup, Stack } from "@mui/material";
+import { Link, NavLink } from "react-router-dom";
 
 export const NavBar = () => {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
   return (
     <>
       <AppBar position="fixed" sx={{ margin: 0, padding: 0, marginBottom: 10 }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            {/* titel Project */}
-            <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
+            <Stack
               sx={{
-                mr: 2,
-                display: { xs: "none", md: "flex" },
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
+                position: "sticky",
+                backgroundColor: "#1976D2",
+                height: 60,
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexDirection: "row",
               }}
             >
-              TERRORISM
-            </Typography>
-
-            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-              {/* amburger icons */}
-              <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                onClick={handleOpenNavMenu}
-                color="inherit"
-              >
-                <MenuIcon />
-              </IconButton>
-              {/* amburger info */}
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
+              <Box
+                sx={{
+                  display: "inline-block",
+                  padding: "10px 20px",
+                  backgroundColor: "#1976d2", // צבע רקע כחול
+                  borderRadius: "8px",
+                  textDecoration: "none",
+                  "&:hover": {
+                    backgroundColor: "#115293", // צבע רקע כהה יותר במעבר עכבר
+                  },
                 }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
+                component={NavLink}
+                to="/"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  fontSize: "16px",
+                  fontWeight: "bold",
                 }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{ display: { xs: "block", md: "none" } }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography sx={{ textAlign: "center" }}>{page}</Typography>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
-
-            <Typography
-              variant="h5"
-              noWrap
-              component="a"
-              href="#app-bar-with-responsive-menu"
-              sx={{
-                mr: 2,
-                display: { xs: "flex", md: "none" },
-                flexGrow: 1,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
-            >
-              TERRORISM
-            </Typography>
-
-            {/* links */}
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              {/* {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
-                >
-                  {page}
-                </Button>
-              ))} */}
-            </Box>
+                שאלה 1
+              </Box>
+              <Box
+                sx={{
+                  display: "inline-block",
+                  padding: "10px 20px",
+                  backgroundColor: "#1976d2", // צבע רקע כחול
+                  borderRadius: "8px",
+                  textDecoration: "none",
+                  "&:hover": {
+                    backgroundColor: "#115293", // צבע רקע כהה יותר במעבר עכבר
+                  },
+                }}
+                component={NavLink}
+                to="/Casualty_regions"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                }}
+              >
+                שאלה 2
+              </Box>
+              <Box
+                sx={{
+                  display: "inline-block",
+                  padding: "10px 20px",
+                  backgroundColor: "#1976d2", // צבע רקע כחול
+                  borderRadius: "8px",
+                  textDecoration: "none",
+                  "&:hover": {
+                    backgroundColor: "#115293", // צבע רקע כהה יותר במעבר עכבר
+                  },
+                }}
+                component={NavLink}
+                to="/Incident_trends"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                }}
+              >
+                שאלה 3
+              </Box>
+            </Stack>
           </Toolbar>
         </Container>
       </AppBar>
     </>
   );
 };
+
+// import { Box, Button, Stack, Typography } from "@mui/material";
+// import { blue } from "@mui/material/colors";
+// import React from "react";
+// import { NavLink } from "react-router-dom";
+
+// export const NavBar = () => {
+//   return (
+//     <>
+//       <Stack
+//         sx={{
+//           position: "sticky",
+//           backgroundColor: "#1976D2",
+//           height: 60,
+//           width: "100%",
+//           display: "flex",
+//           justifyContent: "center",
+//           alignItems: "center",
+//           flexDirection: "row",
+//         }}
+//       >
+//         <Box
+//           sx={{
+//             display: "inline-block",
+//             padding: "10px 20px",
+//             backgroundColor: "#1976d2", // צבע רקע כחול
+//             borderRadius: "8px",
+//             textDecoration: "none",
+//             "&:hover": {
+//               backgroundColor: "#115293", // צבע רקע כהה יותר במעבר עכבר
+//             },
+//           }}
+//           component={NavLink}
+//           to="/Casualty_regions"
+//           style={{
+//             color: "white",
+//             textDecoration: "none",
+//             fontSize: "16px",
+//             fontWeight: "bold",
+//           }}
+//         >
+//           שאלה 1
+//         </Box>
+//       </Stack>
+//     </>
+//   );
+// };
