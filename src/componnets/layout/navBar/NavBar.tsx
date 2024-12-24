@@ -96,6 +96,28 @@ export const NavBar = () => {
               >
                 שאלה 3
               </Box>
+              <Box
+                sx={{
+                  display: "inline-block",
+                  padding: "10px 20px",
+                  backgroundColor: "#1976d2", // צבע רקע כחול
+                  borderRadius: "8px",
+                  textDecoration: "none",
+                  "&:hover": {
+                    backgroundColor: "#115293", // צבע רקע כהה יותר במעבר עכבר
+                  },
+                }}
+                component={NavLink}
+                to="/Adding_terrorist_act"
+                style={{
+                  color: "white",
+                  textDecoration: "none",
+                  fontSize: "16px",
+                  fontWeight: "bold",
+                }}
+              >
+                הוספת מעשה טרור
+              </Box>
             </Stack>
           </Toolbar>
         </Container>
