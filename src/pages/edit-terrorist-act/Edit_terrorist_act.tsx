@@ -262,7 +262,11 @@ export const Edit_terrorist_act = () => {
             />
           </Box>
           <Box>
-            <Button variant="contained" color="primary" onClick={handleSubmit}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => handleSubmit}
+            >
               עדכון מעשה טרור
             </Button>
           </Box>

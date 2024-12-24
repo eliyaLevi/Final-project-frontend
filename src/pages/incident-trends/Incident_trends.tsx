@@ -84,7 +84,11 @@ export const Incident_trends = () => {
             }}
             sx={{ mb: 0 }}
           />
-          <Button variant="contained" color="primary" onClick={handleSubmit}>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => handleSubmit}
+          >
             שלח
           </Button>
         </Box>

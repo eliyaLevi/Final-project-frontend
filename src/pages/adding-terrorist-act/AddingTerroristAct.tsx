@@ -230,7 +230,11 @@ export const AddingTerroristAct = () => {
             />
           </Box>
           <Box>
-            <Button variant="contained" color="primary" onClick={handleSubmit}>
+            <Button
+              variant="contained"
+              color="primary"
+              onClick={() => handleSubmit}
+            >
               הוספת מעשה טרור
             </Button>
           </Box>
