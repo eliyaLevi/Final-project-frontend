@@ -16,7 +16,9 @@ import { Stack } from "@mui/material";
 // }
 
 export const Casualty_regions = () => {
-  const { GET, data } = useFetch("https://final-project-beckend.onrender.com");
+  const { GET, data } = useFetch(
+    "https://final-project-beckend.onrender.com/terror"
+  );
 
   const [locations, setlocations] = useState();
 

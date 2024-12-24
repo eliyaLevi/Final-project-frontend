@@ -19,7 +19,7 @@ interface IAttackTypes {
 
 export const Incident_trends = () => {
   const { GET_INCIDENT_TRENDS_BY_CALL, data } = useFetch(
-    "https://final-project-beckend.onrender.com"
+    "https://final-project-beckend.onrender.com/terror"
   );
 
   const [attackType, setAttackType] = useState<IAttackTypes[]>([]);
