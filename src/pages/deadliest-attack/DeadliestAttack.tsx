@@ -18,7 +18,7 @@ interface IAttackTypes {
 }
 
 export const DeadliestAttack = () => {
-  const { GET, data } = useFetch("http://localhost:3001/terror");
+  const { GET, data } = useFetch("https://final-project-beckend.onrender.com");
 
   const [attackType, setAttackType] = useState<IAttackTypes[]>([]);
 
