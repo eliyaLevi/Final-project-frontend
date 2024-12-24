@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import useFetch from "../../componnets/hooks/UseFetch";
-import MapComponent from "../../componnets/map/Map";
 import CasualtyMap from "../../componnets/map/Map";
-import { Box, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
 
 // interface ILocition {
 //   id: string;

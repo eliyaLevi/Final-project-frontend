@@ -24,7 +24,7 @@ export const Edit_terrorist_act = () => {
   const [nwound, setNwound] = useState(0);
 
   const { id } = useParams();
-  const navigate = useNavigate();
+//   const navigate = useNavigate();
 
   useEffect(() => {
     GETOne(id);

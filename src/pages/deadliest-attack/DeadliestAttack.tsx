@@ -1,4 +1,4 @@
-import { Box, Button, Stack } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { useEffect, useState } from "react";
 import {
   BarChart,
@@ -11,8 +11,6 @@ import {
   Tooltip,
 } from "recharts";
 import useFetch from "../../componnets/hooks/UseFetch";
-import { Casualty_regions } from "../casualty_regions/Casualty_regions";
-import { Link } from "react-router-dom";
 
 interface IAttackTypes {
   _id: string;
