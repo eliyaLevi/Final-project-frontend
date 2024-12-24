@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import useFetch from "../../componnets/hooks/UseFetch";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 
 export const Edit_terrorist_act = () => {
@@ -24,7 +24,7 @@ export const Edit_terrorist_act = () => {
   const [nwound, setNwound] = useState(0);
 
   const { id } = useParams();
-//   const navigate = useNavigate();
+  //   const navigate = useNavigate();
 
   useEffect(() => {
     GETOne(id);

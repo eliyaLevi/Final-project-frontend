@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import useFetch from "../../componnets/hooks/UseFetch";
 
 export const AddingTerroristAct = () => {
-  const { POST, data } = useFetch("http://localhost:3001");
+  const { POST } = useFetch("http://localhost:3001");
 
   const [eventid, setEventid] = useState(0);
   const [iyear, setIyear] = useState(0);
