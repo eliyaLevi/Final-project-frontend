@@ -8,7 +8,7 @@ export const AppRouter = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<DeadliestAttack />} />
+        <Route path="/Final-project-frontend" element={<DeadliestAttack />} />
         <Route path="/Casualty_regions" element={<Casualty_regions />} />
         <Route path="/Incident_trends" element={<Incident_trends />} />
         <Route path="/Adding_terrorist_act" element={<AddingTerroristAct />} />
