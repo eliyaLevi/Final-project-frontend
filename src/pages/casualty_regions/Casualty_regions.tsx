@@ -32,6 +32,7 @@ export const Casualty_regions = () => {
       setlocations(data);
     }
   }, [data]);
+  console.log(1);
 
   return (
     <Stack
